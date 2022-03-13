@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import WeatherWidget from "./components/organisms/WeatherWidget";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
 
 const App = () => (
-  <h1>My React and TypeScript App asas!</h1>
+  <div>
+    <h1>Weather App!</h1>
+    <ThemeProvider theme={theme}>
+      <WeatherWidget />
+    </ThemeProvider>
+  </div>
 );
 
-ReactDOM.render(
-  <App />,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));

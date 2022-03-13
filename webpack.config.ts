@@ -8,7 +8,7 @@ interface Configuration extends WebpackConfiguration {
 }
 const config: Configuration = {
   entry: path.join(__dirname, "src", "index.tsx"),
-  mode: 'development',
+  mode: "development",
   module: {
     rules: [
       {
@@ -38,7 +38,8 @@ const config: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
-    }),
+      title: "Development",
+    })
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
@@ -47,7 +48,7 @@ const config: Configuration = {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
     static: path.join(__dirname, "build"),
     compress: true,
