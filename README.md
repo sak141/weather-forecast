@@ -1,8 +1,12 @@
 # weather-forecast
 
-To Do
-storybook for components
+npm install
+npm start
+
+`To Do`
+use observables
 state management
+storybook for components
 jest for unit testing
 visual diff testing
-playwright
+cypress / playwright
